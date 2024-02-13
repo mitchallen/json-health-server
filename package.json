@@ -1,7 +1,7 @@
 {
   "name": "json-health-server",
   "version": "1.0.0",
-  "description": "A simple JSON health server",
+  "description": "A simple JSON health and swagger server",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
