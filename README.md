@@ -34,18 +34,21 @@ npm run docker:build
 
 ### Run 
 
+* Confirm that Docker is running
+* Make sure nothing else is running on the port
+
 ```sh
 npm run docker:run
 ```
 
 Browse to:
-* http://localhost:3001
-* http://localhost:3001/api-docs/
+* http://localhost:3000
+* http://localhost:3000/api-docs/
 
 or:
 
 ```sh
-curl http://localhost:3001
+curl http://localhost:3000
 ```
 
 ### Rebuild and Run again
