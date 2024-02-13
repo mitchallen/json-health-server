@@ -41,14 +41,16 @@ npm run docker:build
 npm run docker:run
 ```
 
+The port was loaded from the env.docker.list file:
+
 Browse to:
-* http://localhost:3000
-* http://localhost:3000/api-docs/
+* http://localhost:3100
+* http://localhost:3100/api-docs/
 
 or:
 
 ```sh
-curl http://localhost:3000
+curl http://localhost:3100
 ```
 
 ### Rebuild and Run again
