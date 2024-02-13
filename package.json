@@ -16,7 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["api", "swagger", "json"],
-  "author": "Mitch Allen <https://mitchallen.com",
+  "author": "Mitch Allen <https://mitchallen.com>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
