@@ -11,7 +11,7 @@ npm start
 
 * Browse to the root endpoint - showing server status:
 
-* http://localhost:3000/api-docs/
+* http://localhost:3000/
 
 * Browse to the API Swagger Explorer: 
 
