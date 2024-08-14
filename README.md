@@ -3,6 +3,47 @@ json-health-server
 
 ## Usage
 
+Run `make` with no arguments for a list of commands:
+
+```sh
+make
+```
+
+For example:
+
+```sh
+Available targets:
+  make start            - Run the Node.js application
+  make docker-clean     - Stop, remove the Docker container, and remove the Docker image
+  make docker-build     - Build the Docker image
+  make docker-run       - Build the Docker image and run the container
+  make docker-rerun     - Clean, build, and run the Docker container
+  make docker-stop      - Stop the Docker container
+  make docker-start     - Start the Docker container
+  make test             - Run tests (currently not specified)
+```
+
+### Run
+
+To get started, run this command:
+
+```sh
+make docker-run
+```
+
+* Browse to the root endpoint - showing server status:
+
+* http://localhost:3100/
+
+* Browse to the API Swagger Explorer: 
+
+* http://localhost:3100/api-docs/
+
+
+* * *
+
+## Alternate Usage
+
 * To run as a server:
 
 ```js
@@ -11,11 +52,11 @@ npm start
 
 * Browse to the root endpoint - showing server status:
 
-* http://localhost:3000/
+* http://localhost:3100/
 
 * Browse to the API Swagger Explorer: 
 
-* http://localhost:3000/api-docs/
+* http://localhost:3100/api-docs/
 
 
 * * *
