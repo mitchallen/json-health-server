@@ -41,7 +41,6 @@ docker run --platform linux/amd64 -p 3201:3000 --name health1 ghcr.io/mitchallen
 docker run --platform linux/amd64 -p 3202:3000 --name health2 ghcr.io/mitchallen/json-health-server:latest
 ``` 
 
-
 * Or without the platform tag:
 
 ```sh
@@ -54,13 +53,15 @@ docker run -p 3202:3000 --name health2 ghcr.io/mitchallen/json-health-server:lat
 
 ### Start and stop a running container
 
-    docker stop health-server
-    docker stop health1
-    docker stop health2
+```sh
+docker stop health-server
+docker stop health1
+docker stop health2
 
-    docker start health-server
-    docker start health1
-    docker start health2
+docker start health-server
+docker start health1
+docker start health2
+```
     
 * * *
 
@@ -68,15 +69,27 @@ docker run -p 3202:3000 --name health2 ghcr.io/mitchallen/json-health-server:lat
 
 #### Remove Container
 
-    docker stop health-server
-    docker rm health-server
+```sh
+docker stop health-server
+
+docker rm health-server
+```
+
+#### Remove the extra containers (if any)
+
+```sh
+docker stop health1 health2
+
+docker rm health1 health2
+```
 
 ### Remove Image
 
-    docker stop health-server
-    docker rm health-server
-    docker rmi ghcr.io/mitchallen/health-server:latest
-
+```sh
+docker stop health-server
+docker rm health-server
+docker rmi ghcr.io/mitchallen/health-server:latest
+```
 
 * * *
 
