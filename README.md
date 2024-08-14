@@ -1,7 +1,86 @@
 json-health-server
 ==
 
-## Usage
+## Container Usage
+
+### Pull the image from the repo
+
+```sh
+docker pull ghcr.io/mitchallen/json-health-server:latest
+```
+
+### Run the image locally as a container
+
+This will pull the image down from the repo if you didn't already.
+
+This example runs the server locally on port 3200.
+
+If you are using something like an M1 Mac you can add the platform tag:
+
+```sh
+docker run --platform linux/amd64 -p 3200:3000 --name health-server ghcr.io/mitchallen/json-health-server:latest
+```
+
+Or you can run it without the platform tag:
+
+```sh
+docker run -p 3200:3000 --name health-server ghcr.io/mitchallen/json-health-server:latest
+```
+
+* * *
+
+### Running Multiple Containers
+
+You can run multiple containers on multiple ports like this:
+
+* On a Mac:
+
+```sh
+docker run --platform linux/amd64 -p 3201:3000 --name health1 ghcr.io/mitchallen/json-health-server:latest
+
+docker run --platform linux/amd64 -p 3202:3000 --name health2 ghcr.io/mitchallen/json-health-server:latest
+``` 
+
+
+* Or without the platform tag:
+
+```sh
+docker run -p 3201:3000 --name health1 ghcr.io/mitchallen/json-health-server:latest
+
+docker run -p 3202:3000 --name health2 ghcr.io/mitchallen/json-health-server:latest
+``` 
+
+* * *
+
+### Start and stop a running container
+
+    docker stop health-server
+    docker stop health1
+    docker stop health2
+
+    docker start health-server
+    docker start health1
+    docker start health2
+    
+* * *
+
+### Remove
+
+#### Remove Container
+
+    docker stop health-server
+    docker rm health-server
+
+### Remove Image
+
+    docker stop health-server
+    docker rm health-server
+    docker rmi ghcr.io/mitchallen/health-server:latest
+
+
+* * *
+
+## Developer Usage
 
 Run `make` with no arguments for a list of commands:
 
